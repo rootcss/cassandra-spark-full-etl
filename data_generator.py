@@ -4,6 +4,7 @@ from data_faker import event
 from datetime import datetime
 from pyspark import SparkContext, SparkConf
 from pyspark.sql import SQLContext
+from config import *
 
 conf = SparkConf()\
     .setAppName(APPNAME) \
