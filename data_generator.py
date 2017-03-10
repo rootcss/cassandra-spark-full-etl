@@ -8,8 +8,9 @@ from pyspark.sql import SQLContext
 conf = SparkConf()\
     .setAppName(APPNAME) \
     .setMaster(MASTER)\
-    .set("spark.cassandra.connection.host", CASSANDRA_HOST) \
-    .set("spark.cassandra.auth.username", CASSANDRA_USERNAME) \
+    .set("spark.cassandra.connection.host", CASSANDRA_HOST)\
+    .set("spark.cassandra.connection.port", CASSANDRA_PORT)\
+    .set("spark.cassandra.auth.username", CASSANDRA_USERNAME)\
     .set("spark.cassandra.auth.password", CASSANDRA_PASSWORD)
 
 sc = SparkContext(MASTER, APPNAME, conf=conf)
