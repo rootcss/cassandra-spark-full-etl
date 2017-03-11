@@ -7,7 +7,7 @@ from pyspark.sql import SQLContext
 from config import *
 
 conf = SparkConf()\
-    .setAppName(APPNAME) \
+    .setAppName(APPNAME)\
     .setMaster(MASTER)\
     .set("spark.cassandra.connection.host", CASSANDRA_HOST)\
     .set("spark.cassandra.connection.port", CASSANDRA_PORT)\
